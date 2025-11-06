@@ -1,11 +1,11 @@
-let remaining = 10;
+let remaining = 30;
 const elCountdown = document.getElementById("countdown");
 const elNotify = document.getElementById("notify");
 
 const timer = setInterval(() => {
   remaining--;
   const m = String(Math.floor(remaining / 60)).padStart(2, "0");
-  const s = String(remaining % 10).padStart(2, "0");
+  const s = String(remaining % 60).padStart(2, "0");
   elCountdown.textContent = `${m}:${s}`;
 
   if (remaining <= 0) {
